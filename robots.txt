@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://hizfin.com/sitemap-index.xml
-Host: https://hizfin.com
+Sitemap: https://hizfin.github.io/sitemap-index.xml
+Host: https://hizfin.github.io
