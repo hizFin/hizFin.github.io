@@ -1,6 +1,6 @@
 module.exports = {
   title: "hizFin 저장소",
-  description: "",
+  description: "안녕",
   author: "hinzFin",
   siteUrl: "https://hinzFin.com",
   links: {
