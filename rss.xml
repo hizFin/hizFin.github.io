@@ -1,48 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of hizFin 저장소]]></title><description><![CDATA[안녕]]></description><link>https://hizFin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 18 Jun 2023 15:23:16 GMT</lastBuildDate><item><title><![CDATA[오류 : Failed to get remote.origin.url]]></title><description><![CDATA[오류 내용 언제 블로그 배포 실행 간 발생 원인 이전에 git 원격 정보 변경작업(별칭:origin -> master)이 있었는데 배포 실행 간 default 별칭인 origin으로 연결시도를 하는 것으로 보임 원인 상세 해당명령어()는 package…]]></description><link>https://hizFin.github.io/012-fix-git-remote/</link><guid isPermaLink="false">https://hizFin.github.io/012-fix-git-remote/</guid><pubDate>Sun, 18 Jun 2023 23:28:00 GMT</pubDate><content:encoded>&lt;h2&gt;오류 내용&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of hizFin 저장소]]></title><description><![CDATA[안녕]]></description><link>https://hizFin.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 18 Jun 2023 15:54:19 GMT</lastBuildDate><item><title><![CDATA[오류 : Failed to get remote.origin.url]]></title><description><![CDATA[오류 내용 언제 블로그 배포 실행 간 발생 원인 이전에 git 원격 정보 변경작업(별칭:origin -> master)이 있었는데 배포 실행 간 default 별칭인 origin으로 연결시도를 하는 것으로 보임 원인 상세 해당명령어()는 package…]]></description><link>https://hizFin.github.io/012-fix-git-remote/</link><guid isPermaLink="false">https://hizFin.github.io/012-fix-git-remote/</guid><pubDate>Sun, 18 Jun 2023 23:28:00 GMT</pubDate><content:encoded>&lt;h2&gt;오류 내용&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Failed to get remote.origin.url (task must either be run in a git repository
 with a configured origin remote or must be configured with the &quot;repo&quot; option)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;언제&lt;/h2&gt;
 &lt;p&gt;블로그 배포 실행 간 발생&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;npm run deploy&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;gh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; run deploy-gh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;원인&lt;/h2&gt;
 &lt;p&gt;이전에 git 원격 정보 변경작업(별칭:origin -&gt; master)이 있었는데 배포 실행 간 default 별칭인 origin으로 연결시도를 하는 것으로 보임&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# 현재 원격정보 조회
-git remote -v
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;    &lt;span class=&quot;token comment&quot;&gt;# 현재 원격정보 조회&lt;/span&gt;
 
-master	https://github.com/hizFin/hizFin.github.io (fetch)
-master	https://github.com/hizFin/hizFin.github.io (push)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+master	https://github.com/hizFin/hizFin.github.io &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fetch&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+master	https://github.com/hizFin/hizFin.github.io &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;push&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;원인 상세&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;해당명령어(&lt;code class=&quot;language-text&quot;&gt;npm run deploy-gh&lt;/code&gt;)는 package.json에 저장된 스크립트로 연결 및 실행됨&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# package.json 
-&quot;deploy-gh&quot;: &quot;gatsby build &amp;amp;&amp;amp; gh-pages -d public&quot;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# package.json 파일&lt;/span&gt;
+&lt;span class=&quot;token string&quot;&gt;&quot;deploy-gh&quot;&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gatsby build &amp;amp;&amp;amp; gh-pages -d public&quot;&lt;/span&gt;
 
-# gatsby build : local에서 빌드파일을 만듦(public 폴더에 생성)
-# gh-pages -d public : public에 빌드된 파일을 gh-pages로 지정한 branch로 git 연결/배포&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;token comment&quot;&gt;# gatsby build : local에서 빌드파일을 만듦(public 폴더에 생성)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# gh-pages -d public : public에 빌드된 파일을 gh-pages로 지정한 branch로 git 연결/배포&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol start=&quot;2&quot;&gt;
-&lt;li&gt;git 원격저장소 연결과정에서 오류 발생&lt;/li&gt;
-&lt;li&gt;git 원격저장소 별칭 조회&lt;/li&gt;
+&lt;li&gt;git 원격저장소 연결과정에서 오류 발생한 것으로 보임&lt;/li&gt;
+&lt;li&gt;git 원격저장소 별칭 조회 결과 기존 default인 origin이 사라져있음.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git remote -v
-master	https://github.com/hizFin/hizFin.github.io (fetch)
-master	https://github.com/hizFin/hizFin.github.io (push)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;
+
+master	https://github.com/hizFin/hizFin.github.io &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fetch&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+master	https://github.com/hizFin/hizFin.github.io &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;push&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;해결&lt;/h2&gt;
+&lt;p&gt;원격저장소의 master 별칭은 삭제하고 origin 별칭을 추가한다.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;master 별칭 삭제&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git remote remove master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote remove master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;origin 별칭 추가(default : origin)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git remote add origin https://github.com/hizFin/hizFin.github.io&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; origin https://github.com/hizFin/hizFin.github.io&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;ol start=&quot;3&quot;&gt;
 &lt;li&gt;git 원격 정보 확인&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git remote -v
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; remote &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;
 
-origin  https://github.com/hizFin/hizFin.github.io (fetch)
-origin  https://github.com/hizFin/hizFin.github.io (push)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[🚛 이사 완료]]></title><description><![CDATA[이사 완료 블로그 이사가 끝났다. 기존 jekyll 테마(ruby 기반)를 사용하고 있었는데 Apple Silicon M1에서 계속 말썽을 일으켜서 gatsby 테마(react…]]></description><link>https://hizFin.github.io/011-complete-move/</link><guid isPermaLink="false">https://hizFin.github.io/011-complete-move/</guid><pubDate>Sat, 17 Jun 2023 13:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;이사 완료&lt;/h2&gt;
+origin  https://github.com/hizFin/hizFin.github.io &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fetch&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+origin  https://github.com/hizFin/hizFin.github.io &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;push&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[🚛 이사 완료]]></title><description><![CDATA[이사 완료 블로그 이사가 끝났다. 기존 jekyll 테마(ruby 기반)를 사용하고 있었는데 Apple Silicon M1에서 계속 말썽을 일으켜서 gatsby 테마(react…]]></description><link>https://hizFin.github.io/011-complete-move/</link><guid isPermaLink="false">https://hizFin.github.io/011-complete-move/</guid><pubDate>Sat, 17 Jun 2023 13:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;이사 완료&lt;/h2&gt;
 &lt;p&gt;블로그 이사가 끝났다.&lt;/p&gt;
 &lt;p&gt;기존 jekyll 테마(ruby 기반)를 사용하고 있었는데 Apple Silicon M1에서 계속 말썽을 일으켜서&lt;br&gt;
 gatsby 테마(react 기반)로 이사를 했다.&lt;/p&gt;
