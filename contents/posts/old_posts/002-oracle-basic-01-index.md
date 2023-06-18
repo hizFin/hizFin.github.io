@@ -4,7 +4,7 @@ title: "[Oracle] 기초강의 : 01.인덱스"
 description:
 date: 2022-11-14
 update: 2022-11-14
-categories: [Sql, Oracle]
+categories: sql
 tags:
   - oracle
   - sql

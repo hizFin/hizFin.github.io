@@ -3,6 +3,7 @@ title: "🚛 이사 완료"
 description:
 date: 2023-06-17
 update: 2023-06-17
+category: blog
 tags:
   - blog
   - gatsby
