@@ -156,6 +156,9 @@ const Header = ({ toggleTheme }) => {
           <Link to="/series">
             <FaListUl />
           </Link>
+          <Link to="/categories">
+            <FaListUl />
+          </Link>
           <Link to="/rss.xml">
             <FaRss />
           </Link>

@@ -7,6 +7,7 @@ import { Link } from "gatsby"
 import Title from "components/Title"
 import Divider from "components/Divider"
 import TagList from "components/TagList"
+import CategoryList from "components/CategoryList"
 
 const PostListWrapper = styled.div`
   @media (max-width: 768px) {
@@ -23,10 +24,18 @@ const PostWrapper = styled.div`
     padding: 0 5px;
   }
 `
-
-const Date = styled.p`
+const Information = styled.div`
   margin-bottom: 16px;
   font-size: 14.4px;
+`
+
+const Date = styled.span`
+  font-weight: 300;
+  color: ${props => props.theme.colors.tertiaryText};
+`
+
+const Category = styled.span`
+  font-weight: 300;
   color: ${props => props.theme.colors.tertiaryText};
 `
 
@@ -37,6 +46,13 @@ const Excerpt = styled.p`
   color: ${props => props.theme.colors.secondaryText};
   word-break: break-all;
 `
+const DivR = styled.div`
+  text-align: right;
+`
+const DivL = styled.div`
+  text-align: left;
+`
+
 
 const checkIsScrollAtBottom = () => {
   return (
@@ -70,7 +86,7 @@ const PostList = ({ postList }) => {
   return (
     <PostListWrapper>
       {postList.slice(0, postCount).map((post, i) => {
-        const { title, date, tags } = post.frontmatter
+        const { title, date, tags, category } = post.frontmatter
         const { excerpt } = post
         const { slug } = post.fields
 
@@ -81,6 +97,9 @@ const PostList = ({ postList }) => {
                 <Link to={slug}>{title}</Link>
               </Title>
               <Date>{date}</Date>
+              <DivR>
+                <CategoryList categoryList={category} />
+              </DivR>
               <Excerpt>{excerpt}</Excerpt>
               <TagList tagList={tags} />
             </PostWrapper>
