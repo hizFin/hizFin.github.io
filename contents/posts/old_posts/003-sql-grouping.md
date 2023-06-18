@@ -3,7 +3,7 @@
 title: "[Oracle] GROUPING SETS 와 ROLLUP 비교 (+ GROUPING_ID)"
 date: 2023-01-04
 update: 2023-01-04
-categories: sql
+category: sql
 tags: 
   - oracle
   - sql

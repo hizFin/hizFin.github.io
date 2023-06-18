@@ -3,7 +3,7 @@
 title: "[Postgres] 나누기 결과값의 소수점이 절삭되는 경우"
 date: 2023-01-24 15:07:00 +0900
 update: 2023-01-24 15:07:00 +0900
-categories: sql
+category: sql
 tags: 
     - postgresql
     - tip

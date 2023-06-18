@@ -3,7 +3,7 @@
 title: "[Sql] 정규식 이용하여 SQL쿼리 소스테이블 한번에 찾기"
 date: 2023-01-10 21:00:00 +0900
 update: 2023-01-10 21:00:00 +0900
-categories: sql
+category: sql
 tags: 
     - sql
     - tip

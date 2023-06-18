@@ -3,7 +3,7 @@
 title: "[Markdown] 마크다운 공백 입력 방법 (전각문자 활용)"
 date: 2023-01-09 19:37:00 +0900
 update: 2023-01-09 19:37:00 +0900
-categories: etc
+category: etc
 tags: 
     - markdown
     - tip

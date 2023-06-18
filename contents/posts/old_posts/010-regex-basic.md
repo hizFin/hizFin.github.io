@@ -3,7 +3,7 @@
 title: "[Sql] 정규식 패턴 기본 요소"
 date: 2023-02-12 20:00:00 +0900
 update: 2023-02-12 20:00:00 +0900
-categories: sql
+category: sql
 tags: 
     - sql
     - oracle

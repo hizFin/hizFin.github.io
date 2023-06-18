@@ -3,7 +3,7 @@
 title: "[Oracle] 샘플 테이블 DDL, DML script"
 date: 2023-01-05 20:37:00 +0900
 update: 2023-01-05 20:37:00 +0900
-categories: sql
+category: sql
 tags: 
     - oracle
     - sql

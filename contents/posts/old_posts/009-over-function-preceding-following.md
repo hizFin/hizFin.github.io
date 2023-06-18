@@ -3,7 +3,7 @@
 title: "[Sql] OVER() 함수 (PRECEDING, FOLLOWING 사용))"
 date: 2023-02-06 22:00:00 +0900
 update: 2023-02-06 22:00:00 +0900
-categories: sql
+category: sql
 tags: 
     - sql
     - oracle
