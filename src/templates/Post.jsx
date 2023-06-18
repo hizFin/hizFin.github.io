@@ -11,7 +11,7 @@ const Post = ({ data }) => {
   const post = data.markdownRemark
   const { previous, next, seriesList } = data
 
-  const { title, date, update, tags, series } = post.frontmatter
+  const { title, date, update, tags, category, series } = post.frontmatter
   const { excerpt } = post
   const { readingTime, slug } = post.fields
 
@@ -41,6 +41,7 @@ const Post = ({ data }) => {
           date={date}
           update={update}
           tags={tags}
+          category={category}
           minToRead={Math.round(readingTime.minutes)}
         />
         {filteredSeries.length > 0 && (
@@ -73,10 +74,11 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        update(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY.MM.DD H:mm:ss")
+        update(formatString: "YYYY.MM.DD H:mm:ss")
         tags
         series
+        category
       }
       fields {
         slug

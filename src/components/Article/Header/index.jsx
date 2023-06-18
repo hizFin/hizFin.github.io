@@ -5,6 +5,7 @@ import { author } from "../../../../blog-config"
 
 import Divider from "components/Divider"
 import TagList from "components/TagList"
+import CategoryList from "components/CategoryList"
 
 const Wrapper = styled.div`
   margin-top: 32px;
@@ -36,7 +37,17 @@ const Date = styled.span`
   color: ${props => props.theme.colors.secondaryText};
 `
 
-const Header = ({ title, date, tags, minToRead }) => {
+const Category = styled.span`
+  font-weight: 700;
+  color: ${props => props.theme.colors.secondaryText};
+`
+
+const DivR = styled.div`
+  text-align: right;
+`
+
+
+const Header = ({ title, date, tags, category, minToRead }) => {
   return (
     <Wrapper>
       <ArticleTitle> {title} </ArticleTitle>
@@ -45,6 +56,9 @@ const Header = ({ title, date, tags, minToRead }) => {
         <Date>· {date} </Date>
         <Date>· {minToRead} min read </Date>
       </Information>
+      <DivR>
+        <CategoryList categoryList={category} />
+      </DivR>
       {tags && <TagList tagList={tags} />}
       <Divider mt="0" />
     </Wrapper>
