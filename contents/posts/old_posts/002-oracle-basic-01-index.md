@@ -2,8 +2,8 @@
 # NO : 002
 title: "[Oracle] 기초강의 : 01.인덱스"
 description:
-date: 2022-11-14
-update: 2022-11-14
+date: 2022-11-14 13:00:00
+update: 2022-11-14 13:00:00
 category: sql
 tags:
   - oracle

@@ -1,8 +1,8 @@
 ---
 title: "🚛 이사 완료"
 description:
-date: 2023-06-17
-update: 2023-06-17
+date: 2023-06-17 13:00:00
+update: 2023-06-17 13:00:00
 category: blog
 tags:
   - blog

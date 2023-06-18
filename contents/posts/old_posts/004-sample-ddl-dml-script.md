@@ -1,8 +1,8 @@
 ---
 # NO : 004
 title: "[Oracle] 샘플 테이블 DDL, DML script"
-date: 2023-01-05 20:37:00 +0900
-update: 2023-01-05 20:37:00 +0900
+date: 2023-01-05 20:37:00
+update: 2023-01-05 20:37:00
 category: sql
 tags: 
     - oracle

@@ -1,8 +1,8 @@
 ---
 # NO : 009
 title: "[Sql] OVER() 함수 (PRECEDING, FOLLOWING 사용))"
-date: 2023-02-06 22:00:00 +0900
-update: 2023-02-06 22:00:00 +0900
+date: 2023-02-06 22:00:00
+update: 2023-02-06 22:00:00
 category: sql
 tags: 
     - sql
