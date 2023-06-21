@@ -6,6 +6,7 @@ update: 2023-06-18 23:28:00
 category: etc
 tags:
   - gatsby
+  - shell
 series: "gatsby 블로그 시작하기"
 ---
 
