@@ -125,7 +125,7 @@ git remote add origin https://github.com/hizFin/hizFin.github.io  # git과 원�
 * 빌드 후 github에 gh-pages 브랜치로 빌드파일(public 폴더 내) add, push하게 되고 이후 github에서 배포를 진행하게 된다.  
 
 
-> ⚠️오류발생 : [Failed to get remote.origin.url](https://hizFin.git.io/012-fix-git-remote/)
+> ⚠️오류발생 : [Failed to get remote.origin.url](https://hizFin.github.io/012-fix-git-remote/)
 
 
 
@@ -144,3 +144,12 @@ git remote add origin https://github.com/hizFin/hizFin.github.io  # git과 원�
 ```shell
  gatsby build
 ```
+
+
+
+## 참고
+
+gatsby 설치1 : https://richwind.co.kr/165  
+gatsby 설치2 : https://hislogs.com/make-gatsby-blog/  
+gatsby 개념 : https://congjang.medium.com/개발-모르는-디자이너-gatsbyjs-사이트-제작-도전기-1-1d557b4155d9  
+hoodie 템플릿 설명서: https://github.com/devHudi/gatsby-starter-hoodie/blob/develop/README-kr.md  
