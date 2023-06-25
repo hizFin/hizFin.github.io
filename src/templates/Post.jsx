@@ -11,7 +11,7 @@ const Post = ({ data }) => {
   const post = data.markdownRemark
   const { previous, next, seriesList } = data
 
-  const { title, date, update, tags, category, series } = post.frontmatter
+  const { title, date, update, tags, category, series, seq } = post.frontmatter
   const { excerpt } = post
   const { readingTime, slug } = post.fields
 
@@ -42,6 +42,7 @@ const Post = ({ data }) => {
           update={update}
           tags={tags}
           category={category}
+          seq={seq}
           minToRead={Math.round(readingTime.minutes)}
         />
         {filteredSeries.length > 0 && (
@@ -78,6 +79,7 @@ export const pageQuery = graphql`
         update(formatString: "YYYY.MM.DD H:mm:ss")
         tags
         series
+        seq
         category
       }
       fields {
@@ -88,7 +90,7 @@ export const pageQuery = graphql`
       }
     }
     seriesList: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___seq] }
       filter: { frontmatter: { series: { eq: $series } } }
     ) {
       edges {
@@ -99,6 +101,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            seq
           }
         }
       }
