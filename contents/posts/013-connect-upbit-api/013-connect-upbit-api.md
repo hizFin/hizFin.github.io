@@ -12,6 +12,9 @@ series: "코인봇 만들기"
 seq: "1"
 ---
 
+코인봇을 만들어 일확천금을 벌어보자.  
+
+시스템 환경 : Mac OS(Silicon M1)
 
 
 ##  1. 업비트 OPEN API KEY 발급받기

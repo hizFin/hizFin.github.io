@@ -8,6 +8,7 @@ tags:
   - gatsby
   - shell
 series: "gatsby 블로그 시작하기"
+seq: "9"
 ---
 
 

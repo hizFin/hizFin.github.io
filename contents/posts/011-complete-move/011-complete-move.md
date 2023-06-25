@@ -8,6 +8,7 @@ tags:
   - blog
   - gatsby
 series: "gatsby 블로그 시작하기"
+seq: "1"
 ---
 
 ## 이사 완료
