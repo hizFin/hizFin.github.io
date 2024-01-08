@@ -1,13 +1,14 @@
 ---
-title: ""
+title: "오류 : node-gyp/18.16.0/include/node/v8-internal.h"
 description:
-date: 2024-01-08 11:47:00
-update: 2024-01-08 11:47:00
-category: diary
+date: 2023-06-25 19:18:00
+update: 2023-06-25 19:18:00
+category: etc
 tags:
-  - 
-series: "diary_2024"
-seq: "0"
+  - gatsby
+  - shell
+series: "gatsby 블로그 시작하기"
+seq: "9"
 ---
 
 
@@ -56,4 +57,3 @@ npx gatsby new hizFin.github.io https://github.com/devHudi/gatsby-starter-hoodie
 
 ## 참고
 stackoverflow : https://stackoverflow.com/questions/67241196/error-no-template-named-remove-cv-t-in-namespace-std-did-you-mean-remove
-
