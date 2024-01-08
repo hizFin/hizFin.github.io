@@ -1,14 +1,13 @@
 ---
-title: "오류 : node-gyp/18.16.0/include/node/v8-internal.h"
+title: ""
 description:
-date: 2023-06-25 19:18:00
-update: 2023-06-25 19:18:00
-category: etc
+date: 2024-01-08 11:47:00
+update: 2024-01-08 11:47:00
+category: diary
 tags:
-  - gatsby
-  - shell
-series: "gatsby 블로그 시작하기"
-seq: "9"
+  - 
+series: "diary_2024"
+seq: "0"
 ---
 
 
