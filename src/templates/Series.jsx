@@ -53,8 +53,8 @@ const Date = styled.span`
   font-weight: lighter;
 `
 
-const Series = ({ pathContext, data }) => {
-  const seriesName = pathContext.series
+const Series = ({ pageContext, data }) => {
+  const seriesName = pageContext.series
   const posts = data.posts.nodes
 
   return (
@@ -90,7 +90,7 @@ export default Series
 export const pageQuery = graphql`
   query BlogSeriesBySeriesName($series: String) {
     posts: allMarkdownRemark(
-      sort: { order: ASC, fields: [frontmatter___seq] }
+      sort: { order: ASC, fields: [frontmatter___date] }
       filter: { frontmatter: { series: { eq: $series } } }
     ) {
       nodes {
@@ -99,12 +99,10 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "YYYY.MM.DD H:mm:ss")
-          update(formatString: "YYYY.MM.DD H:mm:ss")
+          date(formatString: "MMMM DD, YYYY")
+          update(formatString: "MMM DD, YYYY")
           title
           tags
-          category
-          seq
         }
       }
     }

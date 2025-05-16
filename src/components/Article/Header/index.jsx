@@ -5,7 +5,7 @@ import { author } from "../../../../blog-config"
 
 import Divider from "components/Divider"
 import TagList from "components/TagList"
-import CategoryList from "components/CategoryList"
+import { Link } from "gatsby"
 
 const Wrapper = styled.div`
   margin-top: 32px;
@@ -28,8 +28,15 @@ const Information = styled.div`
 `
 
 const Author = styled.span`
-  font-weight: 700;
-  color: ${props => props.theme.colors.text};
+  & > a {
+    font-weight: 700;
+    color: ${props => props.theme.colors.text};
+    text-decoration: none;
+  }
+
+  & > a:hover {
+    text-decoration: underline;
+  }
 `
 
 const Date = styled.span`
@@ -37,28 +44,17 @@ const Date = styled.span`
   color: ${props => props.theme.colors.secondaryText};
 `
 
-const Category = styled.span`
-  font-weight: 700;
-  color: ${props => props.theme.colors.secondaryText};
-`
-
-const DivR = styled.div`
-  text-align: right;
-`
-
-
-const Header = ({ title, date, tags, category, minToRead }) => {
+const Header = ({ title, date, tags, minToRead }) => {
   return (
     <Wrapper>
       <ArticleTitle> {title} </ArticleTitle>
       <Information>
-        <Author> @{author} </Author>
+        <Author>
+          <Link to="/about">@{author}</Link>
+        </Author>
         <Date>· {date} </Date>
         <Date>· {minToRead} min read </Date>
       </Information>
-      <DivR>
-        <CategoryList categoryList={category} />
-      </DivR>
       {tags && <TagList tagList={tags} />}
       <Divider mt="0" />
     </Wrapper>

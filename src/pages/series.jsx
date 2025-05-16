@@ -64,7 +64,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fileAbsolutePath: { regex: "/contents/posts/" } }
+    ) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
@@ -75,11 +78,10 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "YYYY.MM.DD")
-          update(formatString: "YYYY.MM.DD")
+          date(formatString: "MMMM DD, YYYY")
+          update(formatString: "MMM DD, YYYY")
           title
           tags
-          category
           series
         }
       }

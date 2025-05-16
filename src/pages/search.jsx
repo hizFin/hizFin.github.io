@@ -59,17 +59,19 @@ export default Search
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fileAbsolutePath: { regex: "/contents/posts/" } }
+    ) {
       nodes {
         excerpt(pruneLength: 200, truncate: true)
         fields {
           slug
         }
         frontmatter {
-          date(formatString: "YYYY.MM.DD")
+          date(formatString: "MMMM DD, YYYY")
           title
           tags
-          category
         }
         rawMarkdownBody
       }

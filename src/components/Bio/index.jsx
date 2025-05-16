@@ -5,11 +5,19 @@ import {
   FaGithub,
   FaKaggle,
   FaFacebook,
+  FaTwitter,
   FaLinkedin,
   FaInstagram,
-  FaLink,
-  FaEnvelope,
 } from "react-icons/fa"
+
+import {
+  FaXTwitter,
+  FaRegEnvelope,
+  FaMedium,
+  FaBlogger,
+  FaRegFileLines,
+  FaLink,
+} from "react-icons/fa6"
 
 import { siteUrl, description, author, links } from "../../../blog-config"
 
@@ -83,7 +91,20 @@ const Link = ({ link, children }) => {
 }
 
 const Bio = () => {
-  const { github, kaggle, instagram, facebook, linkedIn, email, etc } = links
+  const {
+    github,
+    kaggle,
+    instagram,
+    facebook,
+    twitter,
+    x,
+    blogger,
+    medium,
+    linkedIn,
+    email,
+    resume,
+    link,
+  } = links
 
   return (
     <BioWrapper id="bio">
@@ -95,23 +116,11 @@ const Bio = () => {
           <Link link={github}>
             <FaGithub />
           </Link>
-          <Link link={kaggle}>
-            <FaKaggle />
-          </Link>
-          <Link link={instagram}>
-            <FaInstagram />
-          </Link>
-          <Link link={facebook}>
-            <FaFacebook />
-          </Link>
           <Link link={linkedIn}>
             <FaLinkedin />
           </Link>
           <Link link={email}>
-            <FaEnvelope />
-          </Link>
-          <Link link={etc}>
-            <FaLink />
+            <FaRegEnvelope />
           </Link>
         </LinksWrapper>
       </div>

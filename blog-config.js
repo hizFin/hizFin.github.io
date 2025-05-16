@@ -6,12 +6,19 @@ module.exports = {
   links: {
     github: "https://github.com/hizFin",
     linkedIn: "https://linkedin.com",
-    facebook: "https://www.facebook.com",
-    instagram: "https://www.instagram.com",
     email: "mailto:ofin888@gmail.com",
   },
-  utterances: {
+  useAbout: true,
+  // See https://giscus.app/
+  giscus: {
     repo: "hizFin/hizFin.github.io",
-    type: "pathname",
+    repoId: "R_kgDOJwgYuw",
+    category: "Comments",
+    categoryId: "DIC_kwDOJwgYu84CqNWi",
+    mapping: "pathname",
+    strict: "0",
+    reactionsEnabled: "1",
+    inputPosition: "bottom",
+    lang: "en",
   },
 }

@@ -1,6 +1,6 @@
-const GRAY9 = "#212529"
-const GRAY8 = "#343a40"
-const GRAY7 = "#495057"
+const GRAY9 = "#191919"
+const GRAY8 = "#2D2D2D"
+const GRAY7 = "#404040"
 const GRAY6 = "#868e96"
 const GRAY5 = "#adb5bd"
 const GRAY4 = "#ced4da"
@@ -31,17 +31,11 @@ export const light = {
     selectedTagBackground: GRAY7,
     hoveredTagBackground: GRAY3,
     hoveredSelectedTagBackground: GRAY8,
-    categoryBackground: GRAY1,
-    selectedCategoryBackground: GRAY7,
-    hoveredCategoryBackground: GRAY3,
-    hoveredSelectedCategoryBackground: GRAY8,
     nextPostButtonBackground: "rgba(0, 0, 0, 0.06)",
     hoveredNextPostButtonBackground: "rgba(0, 0, 0, 0.08)",
     seriesBackground: GRAY1,
     tagText: GRAY7,
-    catagoryText: GRAY7,
     selectedTagText: GRAY0,
-    selectedCategoryText: GRAY0,
     spinner: GRAY7,
     scrollTrack: GRAY1,
     scrollHandle: GRAY4,
@@ -67,28 +61,22 @@ export const dark = {
     background: GRAY8,
     icon: GRAY5,
     divider: GRAY8,
-    headerBackground: "rgba(33, 37, 41, 0.85)",
-    headerShadow: "rgba(255, 255, 255, 0.08)",
-    inlineCodeBackground: GRAY7,
-    inlineCodeBackgroundDarker: GRAY8,
+    headerBackground: "rgba(25, 25, 25, 0.85)",
+    headerShadow: "rgba(150, 150, 150, 0.08)",
+    inlineCodeBackground: GRAY8,
+    inlineCodeBackgroundDarker: GRAY7,
     tagBackground: GRAY8,
     selectedTagBackground: GRAY2,
     hoveredTagBackground: GRAY7,
     hoveredSelectedTagBackground: GRAY1,
-    categoryBackground: GRAY8,
-    selectedCategoryBackground: GRAY2,
-    hoveredategoryBackground: GRAY7,
-    hoveredSelectedategoryBackground: GRAY1,
     nextPostButtonBackground: "rgba(255, 255, 255, 0.05)",
     hoveredNextPostButtonBackground: "rgba(255, 255, 255, 0.08)",
     seriesBackground: GRAY8,
     tagText: GRAY2,
-    categoryText: GRAY2,
     selectedTagText: GRAY9,
-    selectedCategoryText: GRAY9,
     spinner: GRAY1,
     scrollTrack: GRAY8,
-    scrollHandle: GRAY6,
+    scrollHandle: GRAY7,
     blockQuoteBorder: GRAY7,
     blockQuoteBackground: GRAY8,
     textFieldBorder: GRAY7,

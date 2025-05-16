@@ -11,8 +11,7 @@ import {
   FaTags,
   FaRss,
   FaSearch,
-  FaListOl,
-  FaHashtag
+  FaListUl,
 } from "react-icons/fa"
 
 const HeaderWrapper = styled.header`
@@ -152,13 +151,10 @@ const Header = ({ toggleTheme }) => {
             </IconRail>
           </ToggleWrapper>
           <Link to="/tags">
-            <FaHashtag />
+            <FaTags />
           </Link>
           <Link to="/series">
-            <FaListOl />
-          </Link>
-          <Link to="/categories">
-            <FaTags />
+            <FaListUl />
           </Link>
           <Link to="/rss.xml">
             <FaRss />
