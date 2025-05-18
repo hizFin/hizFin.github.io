@@ -142,6 +142,15 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ['G-5B94HGV4TK'],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-sitemap`,
     {
