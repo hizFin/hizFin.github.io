@@ -21,11 +21,11 @@ gatsby를 이용해보기로 했다.
 시스템 환경 : Mac OS(Silicon M1)  
 
 
-## 1. gatsby 블로그 생성
+# 1. gatsby 블로그 생성
 
-### 개발환경 구축
+## 개발환경 구축
 
-#### nodeJS 설치
+### nodeJS 설치
 
 homebrew를 통해서 nodeJS를 설치해보자.  
 
@@ -47,7 +47,7 @@ brew link --overwrite node@18
 node -v
 ```
 
-#### git 설치
+### git 설치
 
 **git 설치**  
 
@@ -61,9 +61,9 @@ brew install git
 git -v
 ```
 
-### gatsby 환경 구축
+## gatsby 환경 구축
 
-#### Gatsby CLI(커맨드 라인 인터페이스) 설치
+### Gatsby CLI(커맨드 라인 인터페이스) 설치
 
 프로젝트 파일을 만들 위치로 이동해서 CLI 설치
 
@@ -72,7 +72,7 @@ cd /Users/choeyeongjun/Documents/git # 위치 이동(프로젝트 생성 할 곳
 npm install -g gatsby-cli            # Gatsby CLI 설치
 ```
 
-#### 템플릿 설치
+### 템플릿 설치
 
 **템플릿 설치**
 
@@ -100,14 +100,14 @@ npm run start       # 로컬 배포(자동 빌드)
 * 배포 후 `http://localhost:8000`에서 확인 가능
 
 
-## 2. github pages와 연동
+# 2. github pages와 연동
 
-### github 레퍼지토리 생성
+## github 레퍼지토리 생성
 
 github 홈페이지에서 레퍼지토리를 생성하면 된다.
 * github pages로 사용하기 위해서는 `public` 으로 설정 필요
 
-### github과 연동
+## github과 연동
 
 ```shell
 cd hizFin.github.io # 위치 이동(프로젝트 폴더 내)
@@ -115,7 +115,7 @@ git init            # git 생성
 git remote add origin https://github.com/hizFin/hizFin.github.io  # git과 원격레퍼지토리 연결
 ```
 
-## 3. 서버 배포
+# 3. 서버 배포
 
 ```shell
  npm run deploy-gh
@@ -130,7 +130,7 @@ git remote add origin https://github.com/hizFin/hizFin.github.io  # git과 원�
 
 
 
-## Z. 기타
+# Z. 기타
 
 
 빌드 초기화
@@ -147,7 +147,7 @@ git remote add origin https://github.com/hizFin/hizFin.github.io  # git과 원�
 
 
 
-## 참고
+# 참고
 
 gatsby 설치1 : https://richwind.co.kr/165  
 gatsby 설치2 : https://hislogs.com/make-gatsby-blog/  
